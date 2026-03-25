@@ -111,3 +111,63 @@ body {
 .animate-aurora {
   animation: aurora 60s linear infinite;
 }
+
+/* Custom range slider for simulator */
+.sim-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+  margin-top: -14px;
+  position: relative;
+  z-index: 1;
+}
+.sim-slider::-webkit-slider-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+}
+.sim-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--background);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  margin-top: -7px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sim-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.sim-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.25);
+}
+.sim-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: transparent;
+}
+.sim-slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--background);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+}
+.sim-slider:focus {
+  outline: none;
+}
+.sim-slider:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px var(--ring);
+}
